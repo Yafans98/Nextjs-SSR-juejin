@@ -1,0 +1,46 @@
+// 变量
+$bgcolor: #fff;
+$font-1: #515767;
+$font-hover: #000;
+$navHeight: 120px; //样式
+.navbar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background-color: $bgcolor;
+  width: 100%;
+  height: $navHeight;
+  min-width: 960px;
+  padding: 0 46.5px;
+  .logo {
+    display: block;
+    width: 214px;
+    height: 44px;
+  }
+  .nav {
+    display: flex;
+    width: 728px;
+    height: $navHeight;
+    margin-left: 23px;
+    align-items: center;
+    li {
+      flex: 1;
+      height: 100%;
+      line-height: $navHeight;
+      font-size: 28px;
+      color: $font-1;
+      text-align: center;
+      a {
+        display: inline-block;
+        height: $navHeight;
+        &:hover {
+          border-bottom: 2.5px solid #1e80ff;
+          color: $font-hover;
+        }
+      }
+    }
+    .selected {
+      color: #1e80ff;
+    }
+  }
+}
