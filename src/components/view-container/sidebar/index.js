@@ -1,18 +1,12 @@
 //sidebar容器
-import styles from './sidebar.module.scss';
-import Banner from './banner';
-import Sticky from './sticky';
-import User from './user';
+import styles from './sidebar.module.scss'
+
 function SidebarContainer() {
-	return (
-		<>
-			<div className={styles['sidebar-container']}>
-				<Banner />
-				<Sticky />
-				<User />
-			</div>
-		</>
-	);
+  return (
+    <>
+      <div className={styles['sidebar-container']}></div>
+    </>
+  )
 }
 
 export default SidebarContainer;
