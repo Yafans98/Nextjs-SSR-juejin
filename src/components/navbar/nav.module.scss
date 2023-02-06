@@ -2,7 +2,7 @@
 $bgcolor: #fff;
 $font-1: #515767;
 $font-hover: #000;
-$navHeight: 60px; //样式
+$navHeight: 5rem; //样式
 
 .navbar {
   position: fixed;
@@ -14,7 +14,8 @@ $navHeight: 60px; //样式
   height: $navHeight;
   min-width: 960px;
   padding: 0 5rem;
-  z-index: 100;
+  z-index: 200;
+  border-bottom: 1px solid #f1f1f1;
 
   .logo {
     display: block;

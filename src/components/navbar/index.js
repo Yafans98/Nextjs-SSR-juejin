@@ -20,7 +20,6 @@ function Navbar() {
           <li><a href='#'>商城</a></li>
         </ul>
       </div>
-
     </>
   )
 }

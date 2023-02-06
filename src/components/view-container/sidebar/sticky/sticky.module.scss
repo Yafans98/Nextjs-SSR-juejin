@@ -1,23 +1,23 @@
 //TODO
 //掘金app二维码页面
 .sticky {
-	height: 74px;
+	height: 4.625rem;
 	display: flex;
 	align-items: center;
 	background-color: white;
-	margin-bottom: 15px;
+	margin-bottom: 1.5rem;
 	.image {
-		margin: 10px;
+		margin: 0.625rem;
 		width: 20%;
 		height: auto;
 		background-size: cover;
 	}
 	.words {
-		margin-left: 10px;
+		margin-left: 0.625rem;
 		.headline {
 			font-size: 14px;
 			color: #1d2129;
-			margin-bottom: 10px;
+			margin-bottom: 0.625rem;
 		}
 		.desc {
 			font-size: 12px;

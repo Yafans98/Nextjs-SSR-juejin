@@ -1,0 +1,33 @@
+.article-container {
+  flex: 4;
+  margin: 1rem 1.5rem 0;
+  background-color: #fff;
+  nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    padding: 1.3rem 1rem;
+    border-bottom: 1px solid #eaeaea;
+    ul {
+      width: 100%;
+      a {
+        display: inline-block;
+        width: 3rem;
+        text-align: center;
+        li {
+          font-size: 13.92px;
+          &:hover {
+            color: #1e80ff;
+          }
+          &.active {
+            color: #1e80ff;
+          }
+        }
+        &:nth-child(n + 2) {
+          border-left: 1px solid #eaeaea;
+        }
+      }
+    }
+  }
+}
