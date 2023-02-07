@@ -1,5 +1,6 @@
 import style from './article.module.scss'
-
+import Art from './art';
+import data from './art/data';
 function ArticleContainer() {
   return (
     <>
@@ -11,7 +12,11 @@ function ArticleContainer() {
             <a href="#"><li>热榜</li></a>
           </ul>
         </nav>
-        <article></article>
+        <article>
+          {data.map(info => {
+            return <Art info={info} />
+          })}
+        </article>
       </div>
     </>
   )
