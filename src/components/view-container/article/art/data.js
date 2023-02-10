@@ -14,7 +14,7 @@ const data = [
     author: '阳呀呀',
     date: '1月前',
     title: '去年那个女，30+，已婚，未育的前端打工人2022年过的怎么样',
-    preview: '2022 年的年终总结比 2021 年来的稍晚一些，最主要的原因当然不是因为我的拖延症，而是真真正正的是因为变身小阳人，给自己找了一个很好的借口。',
+    preview: ' ',
     img: 'https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/67bfb0d52d9c479f895be06210bad402~tplv-k3u1fbpfcp-no-mark:240:240:240:160.awebp?',
     label: '前端',
     watch: 22000,

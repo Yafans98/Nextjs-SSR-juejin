@@ -1,5 +1,8 @@
 import style from './art.module.scss'
+import { CMSDOMAIN } from 'utils';
 function Art({ info }) {
+  const { cover } = info || {};
+  console.log(cover);
   return (
     <>
       <div className={style['art-container']}>
@@ -13,7 +16,7 @@ function Art({ info }) {
         <div className={style.infoBox}>
           <div className={style.text}>
             <h2>{info.title}</h2>
-            <p>{info.preview}</p>
+            <p>{info.content}</p>
             <ul>
               <li className={style.watch}>
                 <span className={style.iconfont}>&#xe661;</span>
@@ -30,7 +33,7 @@ function Art({ info }) {
             </ul>
           </div>
           <div className={style.img}>
-            <img src={info.img} alt="#" />
+            <img src={`${CMSDOMAIN}${cover.data.url}`} alt="文章封面" />
           </div>
         </div>
       </div>

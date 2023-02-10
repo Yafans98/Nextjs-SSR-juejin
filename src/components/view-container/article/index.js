@@ -1,7 +1,8 @@
 import style from './article.module.scss'
 import Art from './art';
-import data from './art/data';
-function ArticleContainer() {
+
+
+function ArticleContainer({ data }) {
   return (
     <>
       <div className={style['article-container']}>
@@ -21,5 +22,7 @@ function ArticleContainer() {
     </>
   )
 }
+
+
 
 export default ArticleContainer;

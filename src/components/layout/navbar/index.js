@@ -1,7 +1,6 @@
 import styles from './nav.module.scss';
 import logo from '@/common/images/logo.svg'
 import Image from 'next/image'
-
 function Navbar() {
   return (
     <>
@@ -24,4 +23,4 @@ function Navbar() {
   )
 }
 
-export default Navbar;
+export default Navbar

@@ -51,6 +51,7 @@
       }
       p {
         //只显示一行
+        width: 50rem;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
