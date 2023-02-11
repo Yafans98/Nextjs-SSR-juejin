@@ -2,39 +2,53 @@ import style from './art.module.scss'
 import { CMSDOMAIN } from 'utils';
 function Art({ info }) {
   const { cover } = info || {};
-  console.log(cover);
+
   return (
     <>
       <div className={style['art-container']}>
-        <div className={style.headBox}>
+        {/* 作者信息&标签 */}
+        <div className={style['art-author-info']}>
+          {/* 作者名 */}
           <span className={style.author}>{info.author}</span>
-          <span className={style.dividing}></span>
+          {/* 发布日期 */}
           <span className={style.date}>{info.date}</span>
-          {info.label && <span className={style.dividing}></span>}
+          {/* 标签 */}
           {info.label && <span className={style.label}>{info.label}</span>}
         </div>
-        <div className={style.infoBox}>
-          <div className={style.text}>
-            <h2>{info.title}</h2>
-            <p>{info.content}</p>
-            <ul>
-              <li className={style.watch}>
-                <span className={style.iconfont}>&#xe661;</span>
-                {info.watch}
-              </li>
-              <li className={style.thumb}>
-                <span className={style.iconfont}>&#xec7f;</span>
-                {info.thumb}
-              </li>
-              <li className={style.comment}>
-                <span className={style.iconfont}>&#xe609;</span>
-                {info.comment}
-              </li>
-            </ul>
+
+
+        {/* 文章预览页面 */}
+        <div className={style['art-preview']}>
+          <div className={style["art-text"]}>
+            {/* 标题 */}
+            <h2 className={style['art-title']}>{info.title}</h2>
+            {/* 预览 */}
+            <p className={style['art-content']}>{info.content}</p>
+            {/* 用户交互信息 */}
+            <div className={style['art-user-info']}>
+              <ul>
+                <li className={style.watch}>
+                  <span className={style.iconfont}>&#xe661;</span>
+                  {info.watch}
+                </li>
+                <li className={style.thumb}>
+                  <span className={style.iconfont}>&#xec7f;</span>
+                  {info.thumb}
+                </li>
+                <li className={style.comment}>
+                  <span className={style.iconfont}>&#xe609;</span>
+                  {info.comment}
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className={style.img}>
-            <img src={`${CMSDOMAIN}${cover.data.url}`} alt="文章封面" />
-          </div>
+
+          {/* 文章封面页面 */}
+          {(Object.keys(cover.data).length !== 0) && (
+            <div className={style['art-cover']}>
+              <img src={`${CMSDOMAIN}${cover.data.url}`} alt="文章封面" />
+            </div>
+          )}
         </div>
       </div>
     </>
