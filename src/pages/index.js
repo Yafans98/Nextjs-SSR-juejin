@@ -1,23 +1,24 @@
 import Container from '@/components/view-container'
 import NavList from '@/components/navlist'
 import { LOCALDOMAIN } from "utils"
-function Index({ data }) {
+function Index({ artList }) {
   return (
     <>
       <NavList />
-      <Container data={data} />
+      <Container artList={artList} />
     </>
   )
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch(`${LOCALDOMAIN}/api/artlist`)
+  const res = await fetch(`${LOCALDOMAIN}/api/article`)
     .then(data => data.json());
   return {
     props: {
-      data: res.artinfos.data
+      artList: res
     }
   }
 }
+
 
 export default Index

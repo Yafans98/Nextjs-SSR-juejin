@@ -2,7 +2,6 @@ import style from './art.module.scss'
 import { CMSDOMAIN } from 'utils';
 function Art({ info }) {
   const { cover } = info || {};
-
   return (
     <>
       <div className={style['art-container']}>
@@ -46,7 +45,7 @@ function Art({ info }) {
           {/* 文章封面页面 */}
           {(Object.keys(cover.data).length !== 0) && (
             <div className={style['art-cover']}>
-              <img src={`${CMSDOMAIN}${cover.data.url}`} alt="文章封面" />
+              <img src={`${CMSDOMAIN}${cover.data.attributes.url}`} alt="文章封面" />
             </div>
           )}
         </div>
