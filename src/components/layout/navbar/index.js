@@ -1,7 +1,6 @@
 import styles from './nav.module.scss';
 import logo from '@/common/images/logo.svg'
 import Image from 'next/image'
-
 function Navbar() {
   return (
     <>
@@ -20,9 +19,8 @@ function Navbar() {
           <li><a href='#'>商城</a></li>
         </ul>
       </div>
-
     </>
   )
 }
 
-export default Navbar;
+export default Navbar

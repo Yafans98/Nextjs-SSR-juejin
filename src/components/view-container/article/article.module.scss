@@ -1,0 +1,31 @@
+.article-container {
+  background-color: #fff;
+  flex: 1 1 auto;
+  box-shadow: 0px 1px 2px 0 rgb(0 0 0 /5%);
+  nav {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    padding: 1.3rem 1rem;
+    border-bottom: 1px solid #eaeaea;
+    ul {
+      a {
+        display: inline-block;
+        width: 3rem;
+        text-align: center;
+        li {
+          font-size: 15px;
+          &:hover {
+            color: #1e80ff;
+          }
+          &.active {
+            color: #1e80ff;
+          }
+        }
+        &:nth-child(n + 2) {
+          border-left: 1px solid #eaeaea;
+        }
+      }
+    }
+  }
+}

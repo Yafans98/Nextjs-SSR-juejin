@@ -1,12 +1,13 @@
 //TODO
 //作者排行榜页面
 .user {
+	cursor: pointer;
 	background-color: white;
 	// height: 300px;
 	.header {
 		// margin-top: 20px;
-		padding: 10px;
-		font-size: 14px;
+		padding: 0.625rem;
+		font-size: 0.875rem;
 	}
 	.split {
 		height: 0.5px;
@@ -14,34 +15,34 @@
 	}
 
 	.link {
-		padding: 10px;
+		padding: 0.625rem;
 		display: flex;
 		align-items: center;
 		&:hover {
 			background-color: #fbfbfb;
 		}
 		.avatar {
-			width: 40px;
-			height: 40px;
+			width: 2.5rem;
+			height: 2.5rem;
 			border-radius: 50%;
-			margin-right: 10px;
+			margin-right: 0.625rem;
 		}
 		.details {
 			.name {
-				font-size: 14px;
+				font-size: 0.875rem;
 				color: #333333;
-				margin-bottom: 5px;
+				margin-bottom: 0.3125rem;
 			}
 			.position {
-				font-size: 12px;
+				font-size: 0.75rem;
 				color: #909090;
 			}
 		}
 	}
 	.more {
-		padding: 10px;
+		padding: 0.625rem;
 		text-align: center;
-		font-size: 14px;
+		font-size: 0.875rem;
 		color: #007fff;
 		span {
 			font-weight: 900;

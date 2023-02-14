@@ -2,10 +2,11 @@
 $bgcolor: #fff;
 $font-1: #515767;
 $font-hover: #000;
-$navHeight: 60px; //样式
+$navHeight: 5rem; //样式
 
 .navbar {
   position: fixed;
+  top: 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -14,7 +15,8 @@ $navHeight: 60px; //样式
   height: $navHeight;
   min-width: 960px;
   padding: 0 5rem;
-  z-index: 100;
+  z-index: 200;
+  border-bottom: 1px solid #f1f1f1;
 
   .logo {
     display: block;
@@ -34,7 +36,7 @@ $navHeight: 60px; //样式
       flex: 1;
       height: 100%;
       line-height: $navHeight;
-      font-size: 14px;
+      font-size: 16px;
       color: $font-1;
       text-align: center;
 
