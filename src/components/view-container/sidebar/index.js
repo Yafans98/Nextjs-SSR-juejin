@@ -3,6 +3,7 @@ import styles from './sidebar.module.scss';
 import Banner from './banner';
 import Sticky from './sticky';
 import User from './user';
+
 function SidebarContainer() {
 	return (
 		<>

@@ -1,12 +1,14 @@
 import Container from '@/components/view-container'
 import NavList from '@/components/navlist'
 import { LOCALDOMAIN } from "utils"
+import ArticleContext from 'utils/context'
+
 function Index({ artList }) {
   return (
-    <>
+    <ArticleContext.Provider value={{ artList }}>
       <NavList />
-      <Container artList={artList} />
-    </>
+      <Container />
+    </ArticleContext.Provider>
   )
 }
 
@@ -19,6 +21,5 @@ export async function getServerSideProps(context) {
     }
   }
 }
-
 
 export default Index

@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import style from './navlist.module.scss'
 
 function NavList() {
