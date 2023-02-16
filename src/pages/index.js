@@ -3,9 +3,9 @@ import NavList from '@/components/navlist'
 import { LOCALDOMAIN } from "utils"
 import ArticleContext from 'utils/context'
 
-function Index({ artList }) {
+function Index({ artList, sidebar }) {
   return (
-    <ArticleContext.Provider value={{ artList }}>
+    <ArticleContext.Provider value={{ artList, sidebar }}>
       <NavList />
       <Container />
     </ArticleContext.Provider>
@@ -13,11 +13,14 @@ function Index({ artList }) {
 }
 
 export async function getServerSideProps(context) {
-  const res = await fetch(`${LOCALDOMAIN}/api/article`)
+  const articleProps = await fetch(`${LOCALDOMAIN}/api/article`)
+    .then(data => data.json());
+  const sidebarProps = await fetch(`${LOCALDOMAIN}/api/sidebar`)
     .then(data => data.json());
   return {
     props: {
-      artList: res
+      artList: articleProps,
+      sidebar: sidebarProps
     }
   }
 }

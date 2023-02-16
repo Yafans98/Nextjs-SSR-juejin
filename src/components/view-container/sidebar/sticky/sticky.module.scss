@@ -2,26 +2,35 @@
 //掘金app二维码页面
 .sticky {
 	cursor: pointer;
-	height: 4.625rem;
+	height: 74px;
 	display: flex;
+	flex-flow: row nowrap;
 	align-items: center;
 	background-color: white;
-	margin-bottom: 1.5rem;
-	.image {
-		margin: 0.625rem;
-		width: 20%;
-		height: auto;
-		background-size: cover;
+	margin-bottom: 24px;
+	.sticky-img {
+		flex: 0 0 auto;
+		margin-left: 0.625rem;
+		width: 3.125rem;
+		height: 3.125rem;
 	}
 	.words {
-		margin-left: 0.625rem;
+		width: 0;
+		flex: 1 1 auto;
+		margin-left: 1rem;
 		.headline {
-			font-size: 14px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			font-size: 0.875rem;
 			color: #1d2129;
-			margin-bottom: 0.625rem;
+			margin-bottom: 10px;
 		}
 		.desc {
-			font-size: 12px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			font-size: 0.75rem;
 			color: #86909c;
 		}
 	}
