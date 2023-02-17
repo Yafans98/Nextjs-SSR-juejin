@@ -2,7 +2,7 @@
 //作者排行榜页面
 .user {
 	cursor: pointer;
-	background-color: white;
+	background-color: var(--navbar-background-color);
 	.header {
 		padding: 0.625rem;
 		font-size: 0.875rem;
@@ -36,7 +36,7 @@
 			width: 0;
 			.name {
 				font-size: 0.875rem;
-				color: #333333;
+				color: var(--user-name-color);
 				margin-bottom: 0.3125rem;
 				white-space: nowrap;
 				text-overflow: ellipsis;
@@ -44,7 +44,7 @@
 			}
 			.position {
 				font-size: 0.75rem;
-				color: #909090;
+				color: var(--user-position-color);
 				white-space: nowrap;
 				text-overflow: ellipsis;
 				overflow: hidden;

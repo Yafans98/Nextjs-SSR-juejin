@@ -5,7 +5,6 @@ import { LOCALDOMAIN } from 'utils';
 import { useEffect, useState, useContext } from 'react';
 import ArticleContext from 'utils/context';
 function ArticleContainer() {
-  // console.log(artList);
   const { artList } = useContext(ArticleContext);
   const [artArr, setArtArr] = useState([]);
   useEffect(() => {
@@ -19,7 +18,7 @@ function ArticleContainer() {
   return (
     <>
       <div className={style['article-container']}>
-        <nav>
+        <nav className={style['article-nav']}>
           <ul>
             <a href="#" ><li className={style.active}>推荐</li></a>
             <a href="#"><li>最新</li></a>

@@ -1,9 +1,11 @@
 import Head from "next/head"
+import './global.scss'
 import icon from '@/common/images/favicon.ico'
 import '@/common/styles/frame.scss'
 import Layout from "@/components/layout"
 import App from "next/app"
 import { LOCALDOMAIN } from "utils"
+import { ThemeContextProvider } from "utils/theme"
 const MyApp = ({ Component, pageProps, layout }) => {
   const { title, categories } = layout;
   return (
@@ -12,9 +14,11 @@ const MyApp = ({ Component, pageProps, layout }) => {
         <title>{title}</title>
         <link rel="icon" href={icon.src} />
       </Head>
-      <Layout categories={categories}  >
-        <Component {...pageProps} />
-      </Layout>
+      <ThemeContextProvider>
+        <Layout categories={categories}  >
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeContextProvider>
     </>
   )
 }

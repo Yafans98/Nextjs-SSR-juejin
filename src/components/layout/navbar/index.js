@@ -1,9 +1,10 @@
 import styles from './nav.module.scss';
 import logo from '@/common/images/logo.svg'
 import Image from 'next/image'
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import { ThemeContext } from 'utils/theme';
 function Navbar({ categories }) {
-
+  const { theme, SetTheme } = useContext(ThemeContext)
   const [cate, setCate] = useState([]);
   const [read, SetRead] = useState([]);
 
@@ -44,16 +45,19 @@ function Navbar({ categories }) {
             <ul className={styles.nav}>
               {cate.map((item, index) => {
                 return (
-                  <li key={item.id} >
+                  <li key={item.id} onClick={() => handleClick(item.id)} className={item.id === 1 ? styles.selected : ''}>
                     <a href='#'>{item.attributes.name}</a>
                     {!read[item.id - 1] &&
-                      (<span className={styles.label} onClick={() => handleClick(item.id)} >{item.attributes.label}</span>)
+                      (<span className={styles.label}  >{item.attributes.label}</span>)
                     }
                   </li>
                 )
               })}
             </ul>
           </div>
+          {/* 切换主题样式 */}
+          {theme === 'light' ? <button className={styles.light} onClick={() => SetTheme('dark')}>🌙</button> :
+            <button className={styles.dark} onClick={() => SetTheme('light')}>🔆</button>}
         </div>
       </div>
 

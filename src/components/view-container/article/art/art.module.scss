@@ -13,9 +13,12 @@
         display: inline-block;
       }
     }
+    .author {
+      color: var(--art-author-color);
+    }
     .date,
     .label {
-      color: #86909c;
+      color: var(--secondary-color);
     }
   }
   .art-preview {
@@ -33,10 +36,11 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        color: var(--art-title-color);
       }
       .art-content {
         margin: 13px 0;
-        color: #86909c;
+        color: var(--art-content-color);
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -44,10 +48,11 @@
       .art-user-info {
         ul {
           display: flex;
+          color: var(--art-user-color);
           li + li {
             margin-left: 2.5rem;
             &:hover {
-              color: #1d7dfa;
+              color: var(--link-color);
             }
           }
         }
@@ -82,5 +87,5 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
   margin-right: 0.35rem;
-  color: #4e5969;
+  color: var(--art-icon-color);
 }

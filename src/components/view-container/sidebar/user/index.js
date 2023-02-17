@@ -3,7 +3,6 @@
 import { CMSDOMAIN } from 'utils';
 import styles from './user.module.scss';
 function User({ user }) {
-	console.log(user);
 	return (
 		<>
 			<div className={styles.user}>
