@@ -10,23 +10,27 @@
     border-bottom: 1px solid #eaeaea;
     color: var(--primary-color);
     ul {
-      a {
+      li {
         display: inline-block;
         width: 3rem;
-        text-align: center;
-        li {
+
+       a{
           font-size: 15px;
           &:hover {
             color: var(--link-color);
           }
-          &.active {
-            color: var(--link-color);
-          }
         }
-        &:nth-child(n + 2) {
-          border-left: 1px solid var(--border-color);
+        & +li {
+          border-left: 1px solid var(--art-nav-border-color);
+          text-align: center;
         }
       }
     }
+  }
+}
+.navListCheck{
+  display: none;
+  &:checked + label{
+    color:var(--link-color);
   }
 }
