@@ -1,6 +1,5 @@
-$bgcolor: #f2f3f5;
 body {
-  background: $bgcolor;
+  background: var(--body-background-color);
   min-height: 2000px;
 }
 html {

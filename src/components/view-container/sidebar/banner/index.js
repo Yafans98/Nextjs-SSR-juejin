@@ -1,13 +1,13 @@
 //TODO
 //广告位页面
 import styles from './banner.module.scss';
-import Image from 'next/image';
-import banner from '@/common/images/banner.png';
-function Banner() {
+import { CMSDOMAIN } from 'utils';
+function Banner({ advertise }) {
+	const { ad } = advertise;
 	return (
 		<>
 			<div className={styles.banner}>
-				<Image src={banner} alt="banner" className={styles.image} />
+				<img src={`${CMSDOMAIN}${ad.data.url}`} className={styles.image} alt="###" />
 			</div>
 		</>
 	);

@@ -1,10 +1,11 @@
 import style from './article.module.scss'
 import Art from './art';
 import Link from 'next/link';
-import { CMSDOMAIN, LOCALDOMAIN } from 'utils';
-import { useEffect, useState } from 'react';
-function ArticleContainer({ artList }) {
-  // console.log(artList);
+import { LOCALDOMAIN } from 'utils';
+import { useEffect, useState, useContext } from 'react';
+import ArticleContext from 'utils/context';
+function ArticleContainer() {
+  const { artList } = useContext(ArticleContext);
   const [artArr, setArtArr] = useState([]);
   useEffect(() => {
     let arr = [];
@@ -14,11 +15,10 @@ function ArticleContainer({ artList }) {
     }
     setArtArr(arr);
   }, [])
-  console.log(artArr);
   return (
     <>
       <div className={style['article-container']}>
-        <nav>
+        <nav className={style['article-nav']}>
           <ul>
             <a href="#" ><li className={style.active}>推荐</li></a>
             <a href="#"><li>最新</li></a>

@@ -1,64 +1,33 @@
 //TODO
 //作者排行榜页面
+import { CMSDOMAIN } from 'utils';
 import styles from './user.module.scss';
-import Image from 'next/image';
-import avatar from '@/common/images/avatar.png';
-// import icons from '@/common/styles/ionicons.scss';
-function User() {
+function User({ user }) {
 	return (
 		<>
-			<link
-				rel="stylesheet"
-				href="https://cdn.staticfile.org/ionicons/2.0.1/css/ionicons.min.css"
-			/>
 			<div className={styles.user}>
 				<div className={styles.header}>🏅作者榜</div>
 				<hr className={styles.split} />
-				<a href="">
-					<div className={styles.link}>
-						<Image
-							src={avatar}
-							alt="avatar"
-							className={styles.avatar}
-						/>
-						<div className={styles.details}>
-							<p className={styles.name}>NEXTjs</p>
-							<p className={styles.position}>
-								The ReactFramework
-							</p>
+				{user.map((item, index) => {
+					const { userName, userIntro, company, avatar } = item;
+					return (<a href="#" key={index}>
+						<div className={styles.link}>
+							{/* 头像 */}
+							<div className={styles.avatar}>
+								<img src={`${CMSDOMAIN}${avatar.data.url}`} alt="" />
+							</div>
+							{/* 文本描述 */}
+							<div className={styles.details}>
+								<p className={styles.name}>{userName}</p>
+								<p className={styles.position}>
+									{userIntro}
+									{typeof (company) === 'string' && (<span>@{company}</span>)}
+								</p>
+							</div>
 						</div>
-					</div>
-				</a>
-				<a href="">
-					<div className={styles.link}>
-						<Image
-							src={avatar}
-							alt="avatar"
-							className={styles.avatar}
-						/>
-						<div className={styles.details}>
-							<p className={styles.name}>NEXTjs</p>
-							<p className={styles.position}>
-								The ReactFramework
-							</p>
-						</div>
-					</div>
-				</a>
-				<a href="">
-					<div className={styles.link}>
-						<Image
-							src={avatar}
-							alt="avatar"
-							className={styles.avatar}
-						/>
-						<div className={styles.details}>
-							<p className={styles.name}>NEXTjs</p>
-							<p className={styles.position}>
-								The ReactFramework
-							</p>
-						</div>
-					</div>
-				</a>
+					</a>)
+				})}
+
 				<hr className={styles.split} />
 				<a href="">
 					<div className={styles.more}>

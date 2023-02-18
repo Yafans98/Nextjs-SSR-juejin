@@ -1,3 +1,4 @@
+
 import style from './navlist.module.scss'
 
 function NavList() {
