@@ -4,20 +4,19 @@
 	cursor: pointer;
 	background-color: var(--navbar-background-color);
 	.header {
+		color: var(--user-header-color);
 		padding: 0.625rem;
 		font-size: 0.875rem;
+		border-bottom: 1px solid var(--global-border-color);
 	}
-	.split {
-		height: 0.5px;
-		background-color: #f0f0f0;
-	}
+	
 
 	.link {
 		padding: 0.625rem;
 		display: flex;
 		align-items: center;
 		&:hover {
-			background-color: #fbfbfb;
+			background-color: var(--user-link-hover);
 		}
 		.avatar {
 			flex: 0 0 auto;
@@ -52,10 +51,11 @@
 		}
 	}
 	.more {
+		border-top: 1px solid var(--global-border-color);
 		padding: 0.625rem;
 		text-align: center;
 		font-size: 0.875rem;
-		color: #007fff;
+		color: var(--user-more-color);
 		span {
 			font-weight: 900;
 		}
