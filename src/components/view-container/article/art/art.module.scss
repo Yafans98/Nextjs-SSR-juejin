@@ -1,6 +1,7 @@
 .art-container {
   padding: 16px 16px;
-  border-bottom: 1px solid #ddd;
+  // border-bottom: 1px solid var(--global-border-color);
+  border-top: 1px solid var(--global-border-color);
   cursor: pointer;
   //作者信息
   .art-author-info {

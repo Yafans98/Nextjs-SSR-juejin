@@ -11,7 +11,7 @@ $navHeight: 5rem;
   height: $navHeight;
   min-width: 60rem;
   z-index: 200;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid var(--global-border-color);
 
   .nav-container {
     width: 100%;
