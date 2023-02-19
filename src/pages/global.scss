@@ -8,16 +8,38 @@ html[data-theme="dark"] {
   --layout-border-color: #fff; //layout边框颜色
   --art-border-color: #ca973e92; //文章组件的下边框颜色
   --art-author-color: blue; //文章作者名
-  --art-title-color: #fff;
-  --art-user-color: #fff;
-  --art-icon-color: #c7dc0da3;
-
+  --art-title-color: #fff;//文章标题名
+  --art-user-color: #fff;//文章作者名
+  --art-icon-color: #c7dc0da3//文章点赞等信息颜色
   --sticky-title-color: red; //掘金二维码界面标题
   --sticky-desc-color: orange; //掘金二维码界面描述
-  --art-content-color: #ce1fc2;
-  --art-nav-border-color:skyblue;
+  --art-content-color: #ce1fc2;//文章内容颜色
+  --art-nav-border-color:skyblue;//文章导航文字颜色
   --user-name-color: green;
   --user-position-color: yellow;
+
+  // --body-background-color: #f2f3f5; //body的背景颜色
+
+  // --primary-color: #515767; //layout,navList等字体的主要颜色
+  // --navbar-font-hover: #000; //navbar中标签鼠标经过时的颜色
+  // --navbar-background-color: #fff; //layout,navList的背景颜色;
+  // --link-color: #0070f3; //被选中标签/hover时的颜色
+  // --layout-border-color: #eaeaea; //layout边框颜色
+
+  // --art-title-color: #000;//文章标题颜色
+  // --art-content-color: #86909c;//文章内容亚瑟
+  // --art-user-color: #000;//文章作者颜色
+  // --art-icon-color: #4e5969;//文章点赞等信息颜色
+  // --art-border-color: #ddd; //文章组件的下边框颜色
+  // --secondary-color: #86909c; //label等信息的颜色
+  // --art-author-color: #000; //文章作者名
+  // --art-nav-border-color:#eaeaea;//文章导航栏颜色
+
+  // --sticky-title-color: #1d2129; //掘金二维码界面标题
+  // --sticky-desc-color: #86909c; //掘金二维码界面描述
+
+  // --user-name-color: #333333; //排行榜用户名信息
+  // --user-position-color: #909090; //排行榜用户介绍
 }
 
 html[data-theme="light"] {
@@ -29,14 +51,15 @@ html[data-theme="light"] {
   --link-color: #0070f3; //被选中标签/hover时的颜色
   --layout-border-color: #eaeaea; //layout边框颜色
 
-  --art-title-color: #000;
-  --art-content-color: #86909c;
-  --art-user-color: #000;
-  --art-icon-color: #4e5969;
+  --art-title-color: #000;//文章标题颜色
+  --art-content-color: #86909c;//文章内容亚瑟
+  --art-user-color: #000;//文章作者颜色
+  --art-icon-color: #4e5969;//文章点赞等信息颜色
   --art-border-color: #ddd; //文章组件的下边框颜色
   --secondary-color: #86909c; //label等信息的颜色
   --art-author-color: #000; //文章作者名
-  --art-nav-border-color:#eaeaea;
+  --art-nav-border-color:#eaeaea;//文章导航栏颜色
+
   --sticky-title-color: #1d2129; //掘金二维码界面标题
   --sticky-desc-color: #86909c; //掘金二维码界面描述
 
