@@ -15,7 +15,7 @@ html[data-theme="dark"] {
   --sticky-title-color: red; //掘金二维码界面标题
   --sticky-desc-color: orange; //掘金二维码界面描述
   --art-content-color: #ce1fc2;
-
+  --art-nav-border-color:skyblue;
   --user-name-color: green;
   --user-position-color: yellow;
 }
@@ -36,7 +36,7 @@ html[data-theme="light"] {
   --art-border-color: #ddd; //文章组件的下边框颜色
   --secondary-color: #86909c; //label等信息的颜色
   --art-author-color: #000; //文章作者名
-
+  --art-nav-border-color:#eaeaea;
   --sticky-title-color: #1d2129; //掘金二维码界面标题
   --sticky-desc-color: #86909c; //掘金二维码界面描述
 

@@ -20,9 +20,30 @@ function ArticleContainer() {
       <div className={style['article-container']}>
         <nav className={style['article-nav']}>
           <ul>
-            <a href="#" ><li className={style.active}>推荐</li></a>
-            <a href="#"><li>最新</li></a>
-            <a href="#"><li>热榜</li></a>
+            <li>
+              <a href="#">
+                <input type="radio" name="art-list" id={`art-list1`} className={style.navListCheck} defaultChecked />
+                <label htmlFor="art-list1">
+                  推荐
+                </label>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <input type="radio" name="art-list" id={`art-list2`} className={style.navListCheck} />
+                <label htmlFor="art-list2">
+                  最新
+                </label>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <input type="radio" name="art-list" id={`art-list3`} className={style.navListCheck} />
+                <label htmlFor="art-list3">
+                  热榜
+                </label>
+              </a>
+            </li>
           </ul>
         </nav>
         <article>

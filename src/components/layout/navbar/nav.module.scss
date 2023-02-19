@@ -30,7 +30,7 @@ $navHeight: 5rem;
     .navlist-container {
       height: $navHeight;
       margin-left: 1.4375rem;
-      width: 30rem;
+      width: 35rem;
       .nav {
         display: flex;
         li {
@@ -63,9 +63,6 @@ $navHeight: 5rem;
           }
         }
 
-        .selected {
-          color: var(--link-color);
-        }
       }
     }
   }
@@ -74,5 +71,12 @@ $navHeight: 5rem;
   .dark {
     margin-left: auto;
     cursor: pointer;
+  }
+}
+
+.navCheck{
+  display: none;
+  &:checked + label {
+    color:var(--link-color);
   }
 }

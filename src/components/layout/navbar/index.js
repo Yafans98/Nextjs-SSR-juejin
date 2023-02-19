@@ -3,6 +3,7 @@ import logo from '@/common/images/logo.svg'
 import Image from 'next/image'
 import { useEffect, useState, useContext } from 'react';
 import { ThemeContext } from 'utils/theme';
+import Index from '@/pages';
 function Navbar({ categories }) {
   const { theme, SetTheme } = useContext(ThemeContext)
   const [cate, setCate] = useState([]);
@@ -24,6 +25,7 @@ function Navbar({ categories }) {
     }
     setCate(arr);
     SetRead(readArr);
+
   }, [])
 
   const handleClick = id => {
@@ -33,6 +35,7 @@ function Navbar({ categories }) {
       return [...arr]
     })
   }
+
   return (
     <>
       <div className={styles.navbar}>
@@ -45,10 +48,15 @@ function Navbar({ categories }) {
             <ul className={styles.nav}>
               {cate.map((item, index) => {
                 return (
-                  <li key={item.id} onClick={() => handleClick(item.id)} className={item.id === 1 ? styles.selected : ''}>
-                    <a href='#'>{item.attributes.name}</a>
+                  <li key={item.id} onClick={() => handleClick(item.id)} >
+                    <a href='#'>
+                      <input type="radio" name="nav" id={`nav${item.id}`} className={styles.navCheck} defaultChecked={item.id === 1 ? true : false} />
+                      <label htmlFor={`nav${item.id}`}>
+                        {item.attributes.name}
+                      </label>
+                    </a>
                     {!read[item.id - 1] &&
-                      (<span className={styles.label}  >{item.attributes.label}</span>)
+                      (<span className={styles.label}>{item.attributes.label}</span>)
                     }
                   </li>
                 )
