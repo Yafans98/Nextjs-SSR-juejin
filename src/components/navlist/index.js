@@ -1,19 +1,24 @@
-import style from './navlist.module.scss'
-import ArticleContext from 'utils/context';
+import style from './navlist.module.scss';
+import { ReducerContext } from 'utils/reducer';
 import { useContext, useEffect, useState } from 'react';
+import { FILTER } from 'utils/action';
 function NavList() {
-  //本地是否有用户自定义的标签信息？
-  //or 后台配置subNav
-  const { labels } = useContext(ArticleContext);
-  const subnavs = labels.data;
-  console.log(subnavs);
+
+  const { state, dispatch } = useContext(ReducerContext);
+  const { labels } = state || {};
+
+  const subnavs = labels.data || [];
+
   const [nav, setNav] = useState([]);
   const [manage, setManage] = useState(false);
 
+  //本地是否有用户自定义的标签信息？
+  //or 后台配置subNav
   useEffect(() => {
     const subnav = JSON.parse(localStorage.getItem('subnav')) || subnavs;
     setNav(subnav);
   }, [])
+
   //标签管理功能
   const tagManagement = id => {
     let tempNav;
@@ -34,12 +39,14 @@ function NavList() {
         <ul className={style.list}>
           {nav.map((item, index) => {
             const { id, attributes } = item;
+            const { name } = attributes;
             return (
               <li key={id}>
+                {/* onClick={() => dispatch({ type: FILTER, payload: name })} */}
                 <a href="#" >
                   <input type="radio" name="nav-list" id={`navList${id}`} className={style.navListCheck} defaultChecked={id === 1 ? true : false} />
                   <label htmlFor={`navList${id}`}>
-                    {attributes.name}
+                    {name}
                   </label>
                   {manage && <span className={style.cancelTag} onClick={() => tagManagement(id)}>X</span>}
                 </a>
@@ -56,6 +63,7 @@ function NavList() {
         </ul>
       </div>
     </>
+
   )
 }
 

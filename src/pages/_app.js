@@ -7,6 +7,7 @@ import App from "next/app"
 import { LOCALDOMAIN } from "utils"
 import { ThemeContextProvider } from "utils/theme"
 import LayoutContext from "utils/layoutContext"
+import { ReducerProvider } from "utils/reducer"
 const MyApp = ({ Component, pageProps, layout }) => {
   const { title, categories } = layout;
   return (

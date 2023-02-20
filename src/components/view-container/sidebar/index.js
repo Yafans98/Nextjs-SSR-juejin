@@ -3,11 +3,15 @@ import styles from './sidebar.module.scss';
 import Banner from './banner';
 import Sticky from './sticky';
 import User from './user';
-import ArticleContext from 'utils/context';
+import { ReducerContext } from 'utils/reducer';
 import { useContext } from 'react';
 function SidebarContainer() {
-	const { sidebar } = useContext(ArticleContext);
+
+	const { state, dispatch } = useContext(ReducerContext);
+	const { sidebar } = state;
+
 	const { advertises, sysinfo, user_ranks } = sidebar;
+
 	return (
 		<>
 			<div className={styles['sidebar-container']}>

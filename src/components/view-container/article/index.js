@@ -3,18 +3,13 @@ import Art from './art';
 import Link from 'next/link';
 import { LOCALDOMAIN } from 'utils';
 import { useEffect, useState, useContext } from 'react';
-import ArticleContext from 'utils/context';
+import { ReducerContext } from 'utils/reducer';
 function ArticleContainer() {
-  const { artList } = useContext(ArticleContext);
-  const [artArr, setArtArr] = useState([]);
-  useEffect(() => {
-    let arr = [];
-    for (let k in artList) {
-      arr[+k] = artList[k];
+  const { state, dispatch } = useContext(ReducerContext);
 
-    }
-    setArtArr(arr);
-  }, [])
+  const artList = state.articles;
+  console.log(artList);
+
   return (
     <>
       <div className={style['article-container']}>
@@ -47,7 +42,7 @@ function ArticleContainer() {
           </ul>
         </nav>
         <article>
-          {artArr.map((info, index) => {
+          {artList.map((info, index) => {
             return (
               <Link href={`${LOCALDOMAIN}/article/${artList[index].id}`} key={index}>
                 <Art info={info.attributes} artDet={artList[index]} />
