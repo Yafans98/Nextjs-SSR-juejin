@@ -1,7 +1,12 @@
 import style from './art.module.scss'
 import { CMSDOMAIN } from 'utils';
 function Art({ info }) {
+  //判断是否有封面
   const { cover } = info || {};
+
+  //标签信息
+  const labels = info.labels.data;
+
   return (
     <>
       <div className={style['art-container']}>
@@ -12,7 +17,10 @@ function Art({ info }) {
           {/* 发布日期 */}
           <span className={style.date}>{info.date}</span>
           {/* 标签 */}
-          {info.label && <span className={style.label}>{info.label}</span>}
+          {labels.map((item, index) => {
+            const { id, attributes } = item;
+            return <span className={style.label} key={index}>{attributes.name}</span>
+          })}
         </div>
 
 
@@ -22,7 +30,7 @@ function Art({ info }) {
             {/* 标题 */}
             <h2 className={style['art-title']}>{info.title}</h2>
             {/* 预览 */}
-            <p className={style['art-content']}>{info.content}</p>
+            <p className={style['art-content']}>{info.Content}</p>
             {/* 用户交互信息 */}
             <div className={style['art-user-info']}>
               <ul>

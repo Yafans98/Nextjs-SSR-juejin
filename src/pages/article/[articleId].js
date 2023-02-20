@@ -8,7 +8,7 @@ function Article({ artInfo }) {
         <div>作者：{attributes.author}</div>
         <div>发表日期：{attributes.date}</div>
         <div>标题：{attributes.title}</div>
-        <div>内容：{attributes.content}</div>
+        <div>内容：{attributes.Content}</div>
       </div>
     </>
   )

@@ -3,8 +3,9 @@ import logo from '@/common/images/logo.svg'
 import Image from 'next/image'
 import { useEffect, useState, useContext } from 'react';
 import { ThemeContext } from 'utils/theme';
-import Index from '@/pages';
-function Navbar({ categories }) {
+import LayoutContext from 'utils/layoutContext';
+function Navbar() {
+  const { categories } = useContext(LayoutContext);
   const { theme, SetTheme } = useContext(ThemeContext)
   const [cate, setCate] = useState([]);
   const [read, SetRead] = useState([]);

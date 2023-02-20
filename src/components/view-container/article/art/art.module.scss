@@ -21,6 +21,16 @@
     .label {
       color: var(--secondary-color);
     }
+
+    .label + .label{
+      &::before {
+        display: inline-block;
+        margin: 0 0.5rem;
+        content: "·";
+        display: inline-block;
+      }
+
+    }
   }
   .art-preview {
     margin-top: 1rem;

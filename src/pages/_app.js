@@ -6,6 +6,7 @@ import Layout from "@/components/layout"
 import App from "next/app"
 import { LOCALDOMAIN } from "utils"
 import { ThemeContextProvider } from "utils/theme"
+import LayoutContext from "utils/layoutContext"
 const MyApp = ({ Component, pageProps, layout }) => {
   const { title, categories } = layout;
   return (
@@ -15,9 +16,15 @@ const MyApp = ({ Component, pageProps, layout }) => {
         <link rel="icon" href={icon.src} />
       </Head>
       <ThemeContextProvider>
-        <Layout categories={categories}  >
-          <Component {...pageProps} />
-        </Layout>
+        <LayoutContext.Provider value={
+          {
+            categories: categories.data,
+          }
+        }>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </LayoutContext.Provider>
       </ThemeContextProvider>
     </>
   )

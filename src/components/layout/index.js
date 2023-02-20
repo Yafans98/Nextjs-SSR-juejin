@@ -1,9 +1,9 @@
 import Navbar from './navbar';
-function Layout({ children, categories }) {
+function Layout({ children }) {
   return (
     <>
       <div >
-        <Navbar categories={categories.data} />
+        <Navbar />
         <div >{children}</div>
       </div>
     </>
