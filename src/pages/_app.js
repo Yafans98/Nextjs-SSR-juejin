@@ -2,6 +2,7 @@ import Head from "next/head"
 import './global.scss'
 import icon from '@/common/images/favicon.ico'
 import '@/common/styles/frame.scss'
+
 import Layout from "@/components/layout"
 import App from "next/app"
 import { LOCALDOMAIN } from "utils"

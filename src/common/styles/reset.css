@@ -8,7 +8,7 @@
     - The "symbol *" part is to solve Firefox SVG sprite bug
  */
 *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
-    all: unset;
+    /* all: unset; */
     display: revert;
 }
 
@@ -21,10 +21,15 @@
 
 /* Reapply the pointer cursor for anchor tags */
 a,
-button {
-    cursor: revert;
+button,
+label {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
 }
-
+hr{
+    all: unset;
+}
 /* Remove list styles (bullets/numbers) */
 ol,
 ul,
@@ -37,7 +42,9 @@ img {
     max-inline-size: 100%;
     max-block-size: 100%;
 }
-
+button{
+    all: unset;
+}
 /* removes spacing between cells in tables */
 table {
     border-collapse: collapse;
