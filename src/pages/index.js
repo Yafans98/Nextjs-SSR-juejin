@@ -13,7 +13,8 @@ function Index({ articles, sidebar, labels }) {
   const defaultState = {
     articles: arr,
     labels,
-    sidebar
+    sidebar,
+    subArt: arr
   }
   //reducer+context 实现集中管理
   const [state, dispatch] = useReducer(reducer, defaultState);

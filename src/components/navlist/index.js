@@ -1,7 +1,7 @@
 import style from './navlist.module.scss';
 import { ReducerContext } from 'utils/reducer';
 import { useContext, useEffect, useState } from 'react';
-import { FILTER } from 'utils/action';
+import { FILTER, RESET } from 'utils/action';
 function NavList() {
 
   const { state, dispatch } = useContext(ReducerContext);
@@ -37,14 +37,22 @@ function NavList() {
     <>
       <div className={style['navlist-container']}>
         <ul className={style.list}>
+          <li>
+            <a href='#' onClick={() => dispatch({ type: RESET })}>
+              <input type="radio" name="nav-list" id={`navList0`} className={style.navListCheck} defaultChecked />
+              <label htmlFor={`navList0`}>
+                综合
+              </label>
+            </a>
+          </li>
           {nav.map((item, index) => {
             const { id, attributes } = item;
             const { name } = attributes;
             return (
               <li key={id}>
                 {/* onClick={() => dispatch({ type: FILTER, payload: name })} */}
-                <a href="#" >
-                  <input type="radio" name="nav-list" id={`navList${id}`} className={style.navListCheck} defaultChecked={id === 1 ? true : false} />
+                <a href="#" onClick={() => dispatch({ type: FILTER, payload: name })}>
+                  <input type="radio" name="nav-list" id={`navList${id}`} className={style.navListCheck} />
                   <label htmlFor={`navList${id}`}>
                     {name}
                   </label>
@@ -59,7 +67,6 @@ function NavList() {
             </a>
             {manage && (<a href='#' className={style.reset} onClick={() => tagManagement(0)}>重置</a>)}
           </li>
-
         </ul>
       </div>
     </>

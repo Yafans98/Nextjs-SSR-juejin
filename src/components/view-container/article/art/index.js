@@ -5,7 +5,7 @@ function Art({ info }) {
   const { cover } = info || {};
 
   //标签信息
-  const labels = info.labels.data;
+  const labels = info.labels;
 
   return (
     <>
@@ -18,8 +18,7 @@ function Art({ info }) {
           <span className={style.date}>{info.date}</span>
           {/* 标签 */}
           {labels.map((item, index) => {
-            const { id, attributes } = item;
-            return <span className={style.label} key={index}>{attributes.name}</span>
+            return <span className={style.label} key={index}>{item}</span>
           })}
         </div>
 

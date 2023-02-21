@@ -7,8 +7,7 @@ import { ReducerContext } from 'utils/reducer';
 function ArticleContainer() {
   const { state, dispatch } = useContext(ReducerContext);
 
-  const artList = state.articles;
-  console.log(artList);
+  const artList = state.subArt;
 
   return (
     <>
