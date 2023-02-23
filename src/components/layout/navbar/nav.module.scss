@@ -1,4 +1,4 @@
-@import '../../../pages/media.scss';
+@import "../../../pages/media.scss";
 
 // 变量
 $font-hover: var(--navbar-font-hover);
@@ -33,18 +33,18 @@ $navHeight: 5rem;
     .navlist-container {
       height: $navHeight;
       margin-left: 1.4375rem;
-    
+
       .nav {
         width: 35rem;
         display: flex;
         height: 100%;
         overflow: hidden;
-        @include media-mini-mobile{
+        @include media-mini-mobile {
           flex-flow: column nowrap;
           width: auto;
         }
         li {
-          @include media-mini-mobile{
+          @include media-mini-mobile {
             font-size: 1.125rem;
             background-color: var(--navbar-background-color);
             padding: 0 1rem;
@@ -77,7 +77,6 @@ $navHeight: 5rem;
             font-size: 0.25rem;
           }
         }
-
       }
     }
   }
@@ -89,12 +88,19 @@ $navHeight: 5rem;
   }
 }
 
-.navCheck{
+.navCheck {
   display: none;
-  &:checked + label  {
-    color:var(--link-color)  ;
+  &:checked + label {
+    color: var(--link-color);
   }
 }
 
-
-
+.logocontainer {
+  display: flex;
+  align-items: center;
+  span {
+    margin-left: 0.5rem;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+  }
+}

@@ -15,8 +15,17 @@ function NavList() {
   //本地是否有用户自定义的标签信息？
   //or 后台配置subNav
   useEffect(() => {
-    const subnav = JSON.parse(localStorage.getItem('subnav')) || subnavs;
-    setNav(subnav);
+    const checkNav = () => {
+      const subnav = JSON.parse(localStorage.getItem('subnav')) || subnavs;
+      setNav(subnav);
+    }
+    checkNav();
+    window.addEventListener('storage', checkNav);
+    return () => {
+      window.removeEventListener('storage', checkNav);
+    }
+
+
   }, [])
 
   //标签管理功能

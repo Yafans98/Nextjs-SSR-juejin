@@ -1,6 +1,7 @@
 import styles from './nav.module.scss';
 import logo from '@/common/images/logo.svg'
 import Image from 'next/image'
+import Link from 'next/link';
 import { useEffect, useState, useContext } from 'react';
 import { ThemeContext } from 'utils/theme';
 import LayoutContext from 'utils/layoutContext';
@@ -42,9 +43,10 @@ function Navbar() {
       <div className={styles.navbar}>
         <div className={styles['nav-container']}>
           {/* Todo：全部做完将这里导航到首页 */}
-          <a href="#" >
+          <Link href="/" className={styles.logocontainer}>
             <Image src={logo} alt='掘金Logo' className={styles.logo} />
-          </a>
+            <span>稀土掘金</span>
+          </Link>
           <div className={styles['navlist-container']}>
             <ul className={styles.nav}>
               {cate.map((item, index) => {
